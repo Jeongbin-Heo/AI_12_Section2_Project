@@ -28,8 +28,8 @@
 |ScreenResolution|스크린 해상도 (ex. IPS Panel Touchscreen 2400x1600)|Categorical|
 |Cpu|Cpu 옵션 (ex. Intel Core i7 2.2GHz)|Categorical|
 |Ram|Ram 옵션 (ex. 8GB)|Categorical|
-|Meomry|메모리 옵션 (ex. 256GB SSD + 2TB HDD)|Categorical|
-|Gpu|Gpu 옵션 (ex. Intel Iris Plus Graplics 640)|Categorical|
+|Memory|메모리 옵션 (ex. 256GB SSD + 2TB HDD)|Categorical|
+|Gpu|Gpu 옵션 (ex. Intel Iris Plus Graphics 640)|Categorical|
 |OpSys|OS 시스템 (ex. MacOS)|Categorical|
 |Weight|무게 (ex. 1.37kg)|Categorical|
 |**Price**|**판매 가격 - 단위 : € (ex. 1339.69) [Target]**|**Numerical**|
@@ -91,7 +91,8 @@
 
 
 ### 모델 평가 및 선택
-* **R2 Score**를 평가지표로 모델을 평가하고 Test Set에 대해 Score가 가장 높은 모델을 일반화 성능이 가장 우수한 최종 모델로 선정
+* **R2 Score**를 평가지표로 모델을 평가
+* Test Set에 대해 Score가 가장 높은 모델을 일반화 성능이 가장 우수한 최종 모델로 선정
 
 |Data|Decision Tree|Random Forest|XGBoost|
 |:---:|:---:|:---:|:---:|
@@ -102,7 +103,7 @@
 
 ### &nbsp;
 
-## *V. 모델 해석 & 결론*
+## *V. 모델 해석*
 ### 특성 중요도
 <img width="818" alt="스크린샷 2022-09-01 오후 3 53 28" src="https://user-images.githubusercontent.com/97662174/187850946-e24f5813-79a5-4883-a86a-00bc3a73e3a9.png">
 
@@ -118,6 +119,8 @@
 
 -> 빨간색 영역이 가장 두꺼운 **Ram** 이 **노트북 판매 가격 상승에 가장 큰 영향을 미치는 특성**이라는 것을 확인
 
-### 결론
+### &nbsp;
+
+## *VI. 결론*
 * 다른 스펙을 업그레이드하는 것에 비해 **Ram**의 용량을 늘림에 따른 판매 가격의 상승폭이 상대적으로 큼
 * Ram보다는 더 큰 화면의 노트북을 구입하거나 메모리 용량을 늘리는 등을 **소비자 입장에서 합리적으로 노트북을 구매하는 방법**으로 제시할 수 있음 
