@@ -71,7 +71,7 @@
 ### **Numerical Data**
 * `Inches` `Pixel` `Cpu GHz` `Ram` `Memory Size` `Weight`
 * **Heatmap**을 이용하여 **판매 가격과의 상관관계** 확인
-<img width="595" alt="스크린샷 2022-09-01 오후 3 10 49" src="https://user-images.githubusercontent.com/97662174/187843950-d760ff80-2aa3-4b1c-becd-46c92adac44d.png">
+<img width="670" alt="correlation" src="https://user-images.githubusercontent.com/97662174/187880017-4771ff0e-0bb1-4fd2-952f-bd395962aeb9.png">
 
 ### &nbsp;
 
