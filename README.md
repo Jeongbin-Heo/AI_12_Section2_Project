@@ -14,8 +14,8 @@
 
 ## *II. 데이터 선정 & Feature Engineering*
 * **출처** : [Kaggle - Laptop Price DataSet](https://www.kaggle.com/datasets/muhammetvarl/laptop-price)
-* **데이터 크기** : (1303, 12) / (rows, columns)
-### **Feature Engineering 이전**
+* **데이터 수** : 1303
+### **Feature Engineering 이전 - (1303, 12) / (rows, columns)**
 
 <img width="1101" alt="스크린샷 2022-09-01 오후 2 17 03" src="https://user-images.githubusercontent.com/97662174/187836816-e72ea3c2-4313-44e6-9947-76ec1aea5275.png">
 
@@ -34,7 +34,7 @@
 |Weight|무게 (ex. 1.37kg)|Categorical|
 |**Price**|**판매 가격 - 단위 : € (ex. 1339.69) [Target]**|**Numerical**|
 
-### **Feature Engineering 이후**
+### **Feature Engineering 이후 - (1303, 12) / (rows, columns)**
 <img width="1068" alt="스크린샷 2022-09-01 오후 2 44 22" src="https://user-images.githubusercontent.com/97662174/187840241-850d53f4-a27d-4129-a030-2b9fc58c3a10.png">
 
 |Feature|Description|Data Type|
