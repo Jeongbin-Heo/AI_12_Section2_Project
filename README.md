@@ -1,35 +1,66 @@
-# 노트북 가격 예측 분석
-> * **개요** : 노트북의 가격을 예측하는 모델을 설계하여 노트북 가격에 가장 영향을 크게 미치는 옵션 확인
-> * **진행 기간** : 2022. 03. 17 ~ 2022. 03. 23
-> * **사용 Skill** : `etc`
+# *노트북 가격 예측 분석*
+* **개요** : 노트북의 가격을 예측하는 모델을 설계하여 노트북 가격에 가장 영향을 크게 미치는 옵션 확인
+* **진행 기간** : 2022. 03. 17 ~ 2022. 03. 23
+* **사용 Skill** : `etc`
 
 ## I. 문제 정의
 * 노트북을 구매하는데 있어서 다양한 옵션이 존재(ex. ram, 메모리, 화면의 해상도, 사과 로고의 유무 등등...)
 * 하지만 원하는 옵션을 모두 추가하기에는 예산을 초과하는 문제에 직면
 * 따라서 노트북에서 선택할 수 있는 옵션별로 가격에 미치는 영향을 파악하면 소비자 입장에서 합리적으로 노트북 사양을 선택할 수 있다.
 
-## II. 데이터 선정
+## II. 데이터 선정 & Feature Engineering
 * **출처** : [Kaggle - Laptop Price DataSet](https://www.kaggle.com/datasets/muhammetvarl/laptop-price)
 * **데이터 크기** : (1303, 12) / (rows, columns)
+### **Feature Engineering 이전**
 
->|Column Names|Data Type|Description|
-|---|---|---|
-|Company|||
-|Product|||
-|TypeName|||
-|Inches|||
-|ScreenResolution|||
-|Cpu|||
-|Ram|||
-|Meomry|||
-|Gpu|||
-|OpSys|||
-|Weight|||
-|Price|||
+<img width="1101" alt="스크린샷 2022-09-01 오후 2 17 03" src="https://user-images.githubusercontent.com/97662174/187836816-e72ea3c2-4313-44e6-9947-76ec1aea5275.png">
 
-## III. Feature Engineering & 데이터 전처리
+|Feature|Description|Data Type|
+|:---:|---|:---:|
+|Company|노트북 제조사 (ex. Apple)|Categorical|
+|Product|노트북 모델명 (ex. Macbook Pro)|Categorical|
+|TypeName|타입 (ex. Ultrabook)|Categorical|
+|Inches|스크린 사이즈 - 단위 : inch (ex. 13.3)|Numerical|
+|ScreenResolution|스크린 해상도 (ex. IPS Panel Touchscreen 2400x1600)|Categorical|
+|Cpu|Cpu 옵션 (ex. Intel Core i7 2.2GHz)|Categorical|
+|Ram|Ram 옵션 (ex. 8GB)|Categorical|
+|Meomry|메모리 옵션 (ex. 256GB SSD + 2TB HDD)|Categorical|
+|Gpu|Gpu 옵션 (ex. Intel Iris Plus Graplics 640)|Categorical|
+|OpSys|OS 시스템 (ex. MacOS)|Categorical|
+|Weight|무게 (ex. 1.37kg)|Categorical|
+|**Price**|**판매 가격 - 단위 : € (ex. 1339.69) [Target]**|**Numerical**|
+
+### **Feature Engineering 이후**
+<img width="1068" alt="스크린샷 2022-09-01 오후 2 44 22" src="https://user-images.githubusercontent.com/97662174/187840241-850d53f4-a27d-4129-a030-2b9fc58c3a10.png">
+
+|Feature|Description|Data Type|
+|:---:|---|:---:|
+|Company|노트북 제조사 (ex. Apple)|Categorical|
+|TypeName|타입 (ex. Ultrabook)|Categorical|
+|Inches|스크린 사이즈 - 단위 : inch (ex. 13.3)|Numerical|
+|Screen Type|스크린 타입 (ex. IPS Panel Retina Display)|Categorical|
+|Touchscreen|터치스크린 유무 (0(터치스크린 x) or 1(터치스크린 O))|Categorical|
+|Pixel|스크린의 픽셀 수 (ex. 3840000)|Numerical|
+|Cpu|Cpu 옵션 (ex. Intel Core i7)|Categorical|
+|Cpu GHz|Cpu의 속도 (ex. 2.2)|Numerical|
+|Ram|Ram 옵션 - 단위 : GB (ex. 8)|Numerical|
+|Memory Size|메모리 용량 - 단위 : GB (ex. 2256)|Numerical|
+|Memory Type|메모리 타입 (ex. SSD + HDD)|Categorical|
+|Gpu|Gpu 옵션 (ex. Intel Iris Plus Graphics 640)|Categorical|
+|OpSys|OS 시스템 (ex. MacOS)|Categorical|
+|Weight|무게 - 단위 : kg (ex. 1.37)|Numerical|
+|**Price**|**판매 가격 - 단위 : € (ex. 1339.69) [Target]**|**Numerical**|
+
+
+## III. 데이터 시각화 & 전처리
+### **Categorical Data**
+
+### *Numerical Data**
 
 
 ## IV. 모델 학습 & 하이퍼 파라미터 튜닝
 
+
 ## V. 모델 해석 & 결론
+
+
