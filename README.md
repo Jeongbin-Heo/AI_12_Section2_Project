@@ -52,13 +52,42 @@
 |**Price**|**판매 가격 - 단위 : € (ex. 1339.69) [Target]**|**Numerical**|
 
 
-## III. 데이터 시각화 & 전처리
+## III. 데이터 시각화
 ### **Categorical Data**
+* `Company` `Typename` `Screen Type` `Touchscreen` `Cpu` `Memory Type` `Gpu` `OpSys`
+* **barplot**을 이용하여 각 category별 **평균 판매 가격**을 비교
+* **ex. Cpu**
+<img width="1095" alt="스크린샷 2022-09-01 오후 3 04 42" src="https://user-images.githubusercontent.com/97662174/187843170-28673f1e-baa2-4830-96e6-3577568c0805.png">
 
-### *Numerical Data**
+* **ex. Memory Type**
+<img width="924" alt="스크린샷 2022-09-01 오후 3 05 12" src="https://user-images.githubusercontent.com/97662174/187843221-e6aacaff-f989-4324-bd0d-b97d2378c507.png">
 
 
-## IV. 모델 학습 & 하이퍼 파라미터 튜닝
+### **Numerical Data**
+* `Inches` `Pixel` `Cpu GHz` `Ram` `Memory Size` `Weight`
+* **Heatmap**을 이용하여 **판매 가격과의 상관관계** 확인
+<img width="595" alt="스크린샷 2022-09-01 오후 3 10 49" src="https://user-images.githubusercontent.com/97662174/187843950-d760ff80-2aa3-4b1c-becd-46c92adac44d.png">
+
+
+## IV. 모델링
+### 하이퍼파라미터 튜닝
+* **사용 모델** :`Decision Tree` `Random Forest` `XGBoost`
+* 1303개의 데이터를 8(Train Set):2(Test Set)으로 분리
+* **사용 모델** :`Decision Tree` `Random Forest` `XGBoost`
+* Train Set에 대해 **RadomizedSearchCV**를 통해 하이퍼 파라미터를 튜닝하며 학
+
+
+||Decision Tree|Random Forest|XGBoost|
+|:---:|:---:|:---:|:---:|
+|1|max_depth|n_estimators|n_estimators|
+|2|min_saples_leaf|max_depth|max_depth|
+|3|max_features|min_samples_leaf|learning_rate|
+|4||max_features||
+
+
+### 모델 평가 및 선택
+* R2 Score를 평가지표로 모델을 평가하고 가장 성능이 좋은
+
 
 
 ## V. 모델 해석 & 결론
