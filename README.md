@@ -43,7 +43,7 @@
 |TypeName|타입 (ex. Ultrabook)|Categorical|
 |Inches|스크린 사이즈 - 단위 : inch (ex. 13.3)|Numerical|
 |Screen Type|스크린 타입 (ex. IPS Panel Retina Display)|Categorical|
-|Touchscreen|터치스크린 유무 (0(터치스크린 x) or 1(터치스크린 O))|Categorical|
+|Touchscreen|터치스크린 유무 (0 or 1)|Categorical|
 |Pixel|스크린의 픽셀 수 (ex. 3840000)|Numerical|
 |Cpu|Cpu 옵션 (ex. Intel Core i7)|Categorical|
 |Cpu GHz|Cpu의 속도 (ex. 2.2)|Numerical|
