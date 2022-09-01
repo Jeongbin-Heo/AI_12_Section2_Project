@@ -72,9 +72,8 @@
 ## IV. 모델링
 ### 하이퍼파라미터 튜닝
 * **사용 모델** :`Decision Tree` `Random Forest` `XGBoost`
-* 1303개의 데이터를 8(Train Set):2(Test Set)으로 분리
-* **사용 모델** :`Decision Tree` `Random Forest` `XGBoost`
-* Train Set에 대해 **RadomizedSearchCV**를 통해 하이퍼 파라미터를 튜닝하며 학
+* 1303개의 데이터를 Train Set : Test Set = 8(1042개) : 2(261개)로 분리
+* Train Set에 대해 **RadomizedSearchCV**를 통해 하이퍼 파라미터를 튜닝하며 학습
 
 
 ||Decision Tree|Random Forest|XGBoost|
@@ -86,8 +85,14 @@
 
 
 ### 모델 평가 및 선택
-* R2 Score를 평가지표로 모델을 평가하고 가장 성능이 좋은
+* **R2 Score**를 평가지표로 모델을 평가하고 Test Set에 대해 Score가 가장 높은 모델을 일반화 성능이 가장 우수한 최종 모델로 선정
 
+|Data|Decision Tree|Random Forest|XGBoost|
+|:---:|:---:|:---:|:---:|
+|Train Set|0.7332|0.7775|0.8233|
+|Test Set|0.6819|0.7391|**0.8146**|
+
+-> **XGBoost**를 최종 모델로 선정
 
 
 ## V. 모델 해석 & 결론
