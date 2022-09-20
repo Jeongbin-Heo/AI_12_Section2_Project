@@ -1,9 +1,9 @@
-# **노트북 가격 예측 분석**
+# :computer: **노트북 가격 예측 분석**
 * **진행 기간** : 2022. 03. 17 ~ 2022. 03. 23
 
 ### &nbsp;
 
-## :notebook: 사용 Skill
+## :books: 사용 Skill
 * **Google Colab**
 * **Python 3.7.13**
   * Feature Engineering : pandas, numpy
