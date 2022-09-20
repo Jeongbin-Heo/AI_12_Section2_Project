@@ -18,7 +18,7 @@
 
 ### &nbsp;
 
-## :file_folder: Contents
+## :pushpin: Contents
 * :one: **프로젝트 진행 배경**  
 * :two: **데이터 선정 & Feature Engineering**  
 * :three: **데이터 시각화**  
