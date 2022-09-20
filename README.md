@@ -1,18 +1,41 @@
 # **노트북 가격 예측 분석**
 * **개요** : 노트북의 가격을 예측하는 모델을 설계하여 노트북 가격에 가장 영향을 크게 미치는 옵션 확인
 * **진행 기간** : 2022. 03. 17 ~ 2022. 03. 23
-* **사용 Skill** : `Pandas` `Numpy` `Matplotlib` `Seaborn` `Scipy` `Scikit-learn` `XGBoost`
 
 ### &nbsp;
 
-## *I. 주제 *
+## :notebook: 사용 Skill
+* **Google Colab**
+* **Python 3.7.13**
+  * Feature Engineering : pandas, numpy
+  * 데이터 시각화 : matplotlib, seaborn
+  * 모델링 : category_encoders, scipy, sklearn, xgboost
+  * 모델 해석 : eli5, pdpbox, shap
+* **ML Models**
+  * Decision Tree Regressor
+  * Random Forest Regressor
+  * XGBoost Regressor
+
+### &nbsp;
+
+## :file_folder: Contents
+* :one: **프로젝트 진행 배경**  
+* :two: **데이터 선정 & Feature Engineering**  
+* :three: **데이터 시각화**  
+* :four: **모델링**  
+* :five: **모델 해석**  
+* :six: **결론**
+
+### &nbsp;
+
+## :one: 프로젝트 진행 배경
 * 노트북을 구매하는데 있어서 업그레이드할 수 있는 여러가지 스펙(ex. Ram, 메모리, 화면의 크기)이 존재
 * 대부분의 사람들이 제한된 예산 내에서 어떤 스펙을 업그레이드해야 합리적인지 알지 못해 어려움을 겪음
 * 따라서 노트북에서 선택할 수 있는 옵션별로 가격에 미치는 영향을 파악하면 소비자 입장에서 합리적으로 노트북 스펙을 업그레이드하는데 참고 가능
 
 ### &nbsp;
 
-## *II. 데이터 선정 & Feature Engineering*
+## :two: 데이터 선정 & Feature Engineering
 * **출처** : [Kaggle - Laptop Price DataSet](https://www.kaggle.com/datasets/muhammetvarl/laptop-price)
 * **데이터 수** : 1303
 ### **Feature Engineering 이전 - (1303, 12) / (rows, columns)**
@@ -57,7 +80,7 @@
 
 ### &nbsp;
 
-## *III. 데이터 시각화*
+## :three: 데이터 시각화
 ### **Categorical Data**
 * `Company` `Typename` `Screen Type` `Touchscreen` `Cpu` `Memory Type` `Gpu` `OpSys`
 * **barplot**을 이용하여 각 category별 **평균 판매 가격**을 비교
@@ -75,7 +98,7 @@
 
 ### &nbsp;
 
-## *IV. 모델링*
+## :four: 모델링
 ### 하이퍼파라미터 튜닝
 * **사용 모델** :`Decision Tree` `Random Forest` `XGBoost`
 * 1303개의 데이터를 Train Set : Test Set = 8(1042개) : 2(261개)로 분리
@@ -103,7 +126,7 @@
 
 ### &nbsp;
 
-## *V. 모델 해석*
+## :five: 모델 해석
 ### 특성 중요도
 <img width="818" alt="스크린샷 2022-09-01 오후 3 53 28" src="https://user-images.githubusercontent.com/97662174/187850946-e24f5813-79a5-4883-a86a-00bc3a73e3a9.png">
 
@@ -121,6 +144,6 @@
 
 ### &nbsp;
 
-## *VI. 결론*
+## :six: 결론
 * 다른 스펙을 업그레이드하는 것에 비해 **Ram**의 용량을 늘림에 따른 판매 가격의 상승폭이 상대적으로 큼
 * Ram보다는 더 큰 화면의 노트북을 구입하거나 메모리 용량을 늘리는 등을 **소비자 입장에서 합리적으로 노트북을 구매하는 방법**으로 제시할 수 있음 
