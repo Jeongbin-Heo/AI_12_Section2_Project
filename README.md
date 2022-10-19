@@ -115,7 +115,7 @@
 
 
 ### 모델 평가 및 선택
-* **R2 Score**를 평가지표로 모델을 평가
+* **평가 지표** : `R2 Score` (회귀 모델의 성능을 0과 1 사이의 값으로 평가 가능)
 * Test Set에 대해 Score가 가장 높은 모델을 일반화 성능이 가장 우수한 최종 모델로 선정
 
 |Data|Decision Tree|Random Forest|XGBoost|
